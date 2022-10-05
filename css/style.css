@@ -96,21 +96,21 @@ body {
   line-height: 1.19;
 }
 
-.blue-btn:hover,
-.blue-btn:focus {
-  background-color: #188ce8;
-}
-
 .blue-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background-color: var(--accent-color);
+  background-color: #188ce8;
   color: #ffffff;
   transition: background-color var(--transition-dur-and-func);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+.blue-btn:hover,
+.blue-btn:focus {
+  background-color: var(--accent-color);
 }
 /* ==================== /COMPONENTS ==================== */
 
@@ -359,8 +359,9 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 42px;
+  color: var(--primary-text-color);
   transition: border-color var(--transition-dur-and-func);
+  padding-left: 42px;
 }
 
 .modal-form-input:focus {
@@ -372,12 +373,13 @@ body {
 }
 
 .modal-form-icon {
+  display: block;
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  display: block;
   transition: fill var(--transition-dur-and-func);
+  fill: var(--primary-text-color);
 }
 
 .modal-form-input:focus + .modal-form-icon {
@@ -385,6 +387,10 @@ body {
 }
 
 .modal-form-message {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
   width: 100%;
   height: 120px;
   resize: none;
@@ -766,15 +772,14 @@ body {
 /* social */
 .footer-container {
   display: flex;
-  column-gap: 70px;
+  justify-content: space-between;
 }
 
-.footer-social-title {
+.footer-title {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
@@ -786,6 +791,40 @@ body {
 }
 .social-list-link-footer {
   background: rgba(255, 255, 255, 0.1);
+}
+
+/* subscribe */
+
+.subscribe-input {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: none;
+  padding: 15px 16px;
+}
+
+.subscribe-input:focus {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  border: 1px solid var(--accent-color);
+  padding: 10px 28px;
+  margin-left: 12px;
+}
+
+.subscribe-btn-icon {
+  align-self: center;
+  fill: #ffffff;
+  margin-left: 10px;
 }
 
 /* ==================== /FOOTER ==================== */
